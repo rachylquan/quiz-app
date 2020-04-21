@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
+    <!-- landing -->
     <header>
         <p>0 &mdash; 8</p>
         <hr>
@@ -23,9 +24,89 @@
         </div>
         
         <div class="right-txt">
-            <button type="button" class="startButton button" onclick=window.location.href='/questions.html'>Start Quiz</button>
+            <button type="button" class="startButton button">Start Quiz</button>
         </div>
-        
     </main>
+    <!-- question view -->
+    <section class="question view">
+        <header>
+            <p class="progress">1 &mdash; 8</p>
+            <hr>
+            <p class="right-txt">Score: 0</p>
+        </header>
+        <form>
+            <fieldset>
+                <legend class="question center-txt">Question?</legend>
+                <div class="answers">
+                    <label class="answer-container">
+                        <input type="radio" name="answer" id="ans-1" value="0">Answer 1
+                    </label>
+                    <label class="answer-container">
+                        <input type="radio" name="answer" id="ans-2" value="1">Answer 2
+                    </label>
+                    <label class="answer-container">
+                        <input type="radio" name="answer" id="ans-3" value="2">Answer 3
+                    </label>
+                    <label class="answer-container">
+                        <input type="radio" name="answer" id="ans-4" value="3">Answer 4
+                    </label>
+                </div>
+                <div class="right-txt">
+                    <button type="button" class="submitButton button">Submit</button>
+                </div>  
+                </fieldset>
+            </fieldset>
+        </form>
+    </section>
+<!-- wrong answer -->
+    <section class="wrong-view">
+        <header>
+            <p class="progress">1 &mdash; 8</p>
+            <hr>
+            <p class="right-txt">Score: 0</p>
+        </header>
+        <main>
+            <form>
+                <fieldset>
+                    <legend class="question center-txt">Question?</legend>
+                    <div class="answers">
+                        <label class="answer-container">
+                            <input type="radio" name="answer" id="ans-1" value="0">Answer 1
+                        </label>
+                        <label class="answer-container">
+                            <input type="radio" name="answer" id="ans-2" value="1">Answer 2
+                        </label>
+                        <label class="answer-container">
+                            <input type="radio" name="answer" id="ans-3" value="2">Answer 3
+                        </label>
+                        <label class="answer-container">
+                            <input type="radio" name="answer" id="ans-4" value="3">Answer 4
+                        </label>
+                    </div>
+                    <div class="right-txt alertsubmit-container">
+                        <p class="wrong-answer">Incorrect, the answer is....</p>
+                        <button type="button" class="nextButton">Next</button>
+                    </div>  
+                </fieldset>
+            </form>
+    </section>
+    <!-- end -->
+    <section class="ending">
+        <header>
+            <p>0 &mdash; 8</p>
+            <hr>
+            <p class="right-txt">Score: 0</p>
+        </header>
+        <main class="center-txt">
+            <img src="" alt="Deathly Hallows image from harry potter">
+            <div class="quiz-copy">
+                <h1>Harry Potter Film Quiz</h1>
+                <p>Description. Description. Description. Description. Description. Description. Description. Description. Description. Description. Description. Description. Description. Description. Description. Description. Description. Description. </p>
+            </div>
+            
+            <div class="right-txt">
+                <button type="button" class="resetButton button">Restart Quiz</button>
+            </div>
+    </section>
 </body>
 </html>
