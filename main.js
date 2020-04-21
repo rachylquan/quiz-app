@@ -1,8 +1,8 @@
-//variables to store the quiz score and question number
+// variables to store the quiz score and question number
 let score = 0;
 let questionNumber = 0;
 
-//template to generate each question
+// template to generate each question
 function generateQuestion() {
     //if the question numner is less than the number of questions
   if (questionNumber < STORE.length) {
@@ -15,7 +15,7 @@ function generateQuestion() {
   }
 }
 
-//increments the number value of the "score" variable by one
+// increments the number value of the "score" variable by one
 function updateScore() {
   score++;
 }
@@ -26,13 +26,13 @@ function updateQuestionNumber() {
   questionNumber++;
 }
 
-//resets the text values of variables
+// resets the text values of variables
 function resetStats() {
   score = 0;
   questionNumber = 0;
 }
 
-//begins the quiz
+// begins the quiz
 function startQuiz() {
   $('.js-startQuiz').on('click', '.startButton', function (event) {
     $('.js-startQuiz').hide();
@@ -42,7 +42,7 @@ function startQuiz() {
   });
 }
 
-//create html for form
+// create html for form
 function createForm(questionIndex) {
   let formMaker = $(`<form id="js-question">
     <fieldset>
@@ -52,21 +52,18 @@ function createForm(questionIndex) {
   </form>`)
 
   let fieldSelector = $(formMaker).find('fieldset div.answers');
-    //for each answer create an input
+  // for each answer create an input
   STORE[questionIndex].answers.forEach(function (answerValue, answerIndex) {
     $(`<label for="${answerIndex}">
-        <input class="radio" type="radio" id="${answerIndex}" value="${answerValue}" name="answer" required>
-        <span>${answerValue}</span>
-      </label>
-      `).appendTo(fieldSelector);
+      <input class="radio" type="radio" id="${answerIndex}" value="${answerValue}" name="answer" required><span>${answerValue}</span></label>`).appendTo(fieldSelector);
   });
-  //add submit button
+  // add submit button
   $(`<div class="right-txt submitContainer"><button type="submit" class="submitButton button"> Submit</button ></div> `).appendTo(formMaker).find('fieldset');
   return formMaker;
 }
 
-//submits a selected answer and checks it against the correct answer
-//runs answer functions accordingly
+// submits a selected answer and checks it against the correct answer
+// runs answer functions accordingly
 function submitAnswer() {
   $('main').on('submit', function (event) {
     event.preventDefault();
@@ -83,8 +80,8 @@ function submitAnswer() {
 }
 
 
-//resulting feedback if a selected answer is correct
-//increments user score by one
+// resulting feedback if a selected answer is correct
+// increments user score by one
 function correctAnswer() {
   // remove submit button
   $('.submitContainer').hide();
@@ -96,18 +93,18 @@ function correctAnswer() {
   updateScore();
 }
   
-//resulting feedback if a selected answer is incorrect
+// resulting feedback if a selected answer is incorrect
 function wrongAnswer() {
   // remove submit button
   $('.submitContainer').hide();
-  //add the right answer and next button
+  // add the right answer and next button
   $(`<div class="right-txt alertsubmit-container">
     <p class="feedback">Nope, the correct answer is ${STORE[questionNumber].correctAnswer}</p>
     <button type="button" class="nextButton">Next</button>
     </div>`).appendTo('#js-question').find('fieldset');
 }
   
-//generates the next question
+// generates the next question
 function nextQuestion() {
   $('main').on('click', '.nextButton', function (event) {
     $('.js-quiz').show();
@@ -116,9 +113,9 @@ function nextQuestion() {
   });
 }
 
-//determines final score and feedback at the end of the quiz
+// determines final score and feedback at the end of the quiz
 function finalScore() {
-  //hide the question number and score on top
+  // hide the question number and score on top
   $('.js-quiz').hide();
   $('.js-final').show();
   
@@ -168,7 +165,7 @@ function restartQuiz() {
   });
 }
 
-//runs the functions
+// runs the functions
 function handleQuiz() {
   startQuiz();
   generateQuestion();
