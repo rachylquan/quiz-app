@@ -128,21 +128,21 @@ function finalScore() {
     $('.js-quiz').toggleClass('.js-final', '.js-quiz');
     
     const great = [
-      '/assets/img/snitch.png',
+      'assets/img/snitch.png',
       'golden snitch water color from harry potter',
       'Great job! ',
       'You remember the films well!'
     ];
   
     const good = [
-      '/assets/img/potter-glasses.jpg',
+      'assets/img/potter-glasses.jpg',
       'harry potter water color, not bad score image',
       'Not too bad. ',
       'You may have passed, but you might want to revisit the movies some more.'
     ];
   
     const bad = [
-      '/assets/img/always.png',
+      'assets/img/potter-glasses.png',
       'always watercolor image',
       'Yikes! ',
       'You definitely need to rewatch the movies.'
