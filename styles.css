@@ -34,8 +34,8 @@ header hr {
 
 img {
     background-color: #e6e6e6;
-    min-height: 250px;
-    min-width: 300px;
+    height: 250px;
+    width: 300px;
     margin-bottom: 20px;
 }
 
