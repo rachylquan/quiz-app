@@ -143,7 +143,7 @@ function renderFinalScore() {
   ];
 
   const good = [
-    'assets/potter-glasses.jpg',
+    'assets/always.png',
     'harry potter water color, not bad score image',
     'Not too bad. ',
     'You may have passed, but you might want to rewatch.'

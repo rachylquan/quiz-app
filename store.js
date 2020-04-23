@@ -51,7 +51,7 @@ const STORE = [
       "can succeed while the other remains!",
       "can live while the other remains!",
       "can live while the other survives!",
-      "can succeed while the other survives"
+      "can succeed while the other survives!"
     ],
     correctAnswer: 2
   },
