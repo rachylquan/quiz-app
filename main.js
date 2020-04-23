@@ -12,7 +12,7 @@ function renderQuestion() {
       // otherwise hide the quize and get final score
     $('.js-quiz').hide();
     $('.questionNumber').text(questionNumber);
-    finalScore();
+    renderFinalScore();
   }
 }
 
@@ -73,6 +73,7 @@ function handleSubmitAnswer() {
   $('main').on('submit', function (event) {
     event.preventDefault();
     $('.response').show();
+    // variables
     let selected = $('input:checked');
     let answer = selected.val();
     let correctIndex = STORE[questionNumber].correctAnswer;
@@ -129,7 +130,7 @@ function handleNextQuestion() {
 }
 
 // determines final score and feedback at the end of the quiz
-function finalScore() {
+function renderFinalScore() {
   // hide the question number and score on top
   $('.js-quiz').hide();
   $('.js-final').show();
